@@ -27,15 +27,18 @@ timer.addEventListener('start', () => {
     $minutesInput.disabled = true;
     $secondsInput.disabled = true;
     $startBtn.textContent = 'stop';
+    $settingsBtn.classList.add('hidden');
 });
 
 timer.addEventListener('pause', () => {
     $startBtn.textContent = 'start';
+    $settingsBtn.classList.remove('hidden');
 });
 
 timer.addEventListener('stop', () => {
     $ring?.classList.add('ending');
     $startBtn.textContent = 'restart';
+    $settingsBtn.classList.remove('hidden');
 });
 
 $startBtn?.addEventListener('click', () => {
@@ -53,7 +56,6 @@ $startBtn?.addEventListener('click', () => {
 });
 
 $settingsBtn.addEventListener('click', () => {
-    if(timer.status === 'run') return;
     $minutesInput.disabled = false;
     $secondsInput.disabled = false;
 });

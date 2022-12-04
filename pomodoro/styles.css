@@ -6,6 +6,15 @@
       url('./fonts/bebasneue-book-webfont.woff2') format('woff2');
 }
 
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 body {
   align-items: center;
   background: #2B2A30;
@@ -107,6 +116,11 @@ input[type=text]:disabled {
   background: none;
   cursor: pointer;
   opacity: 0.3;
+}
+
+.settings.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .settings:hover {
