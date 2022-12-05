@@ -1,6 +1,15 @@
 {
   "name": "ecommerce_component",
   "packageManager": "yarn@1.22.19",
+  "source": "index.html",
+  "main": "dist/main.js",
+  "module": "dist/module.js",
+  "types": "dist/types.d.ts",
+  "scripts": {
+    "dev": "parcel serve",
+    "build": "parcel build src/index.ts",
+    "check": "tsc --noEmit"
+  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -8,6 +17,8 @@
   },
   "devDependencies": {
     "@types/react": "^18",
-    "@types/react-dom": "^18"
+    "@types/react-dom": "^18",
+    "parcel": "^2.8.0",
+    "process": "^0.11.10"
   }
 }
