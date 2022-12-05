@@ -1,44 +1,45 @@
-const menuItems = [
+export type Item = {
+    name: string,
+    price: number,
+    imgSrc: string,
+    count: number,
+}
+
+export const menuItems: Item[] = [
     {
         name: 'French Fries with Ketchup',
         price: 223,
-        image: 'plate__french-fries.png',
-        alt: 'French Fries',
+        imgSrc: 'plate__french-fries.png',
         count: 0
     },
     {
         name: 'Salmon and Vegetables',
         price: 512,
-        image: 'plate__salmon-vegetables.png',
-        alt: 'Salmon and Vegetables',
+        imgSrc: 'plate__salmon-vegetables.png',
         count: 0
     },
     {
         name: 'Spaghetti Meat Sauce',
         price: 782,
-        image: 'plate__spaghetti-meat-sauce.png',
-        alt: 'Spaghetti with Meat Sauce',
+        imgSrc: 'plate__spaghetti-meat-sauce.png',
         count: 0
     },
     {
         name: 'Bacon, Eggs, and Toast',
         price: 599,
-        image: 'plate__bacon-eggs.png',
-        alt: 'Bacon, Eggs, and Toast',
+        imgSrc: 'plate__bacon-eggs.png',
         count: 0
     },
     {
         name: 'Chicken Salad with Parmesan',
         price: 698,
-        image: 'plate__chicken-salad.png',
-        alt: 'Chicken Salad with Parmesan',
+        imgSrc: 'plate__chicken-salad.png',
         count: 0
     },
     {
         name: 'Fish Sticks and Fries',
         price: 634,
-        image: 'plate__fish-sticks-fries.png',
-        alt: 'Fish Sticks and Fries',
+        imgSrc: 'plate__fish-sticks-fries.png',
         count: 0
     }
 ]
