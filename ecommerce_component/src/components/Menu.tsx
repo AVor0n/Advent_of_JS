@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import { Item } from '../../itemsData';
-import { Card } from '../components/Card';
-import { List } from '../components/List';
-import { Panel } from '../components/Panel';
+import { Item } from '../appData';
+import { Card } from './Card';
+import { List } from './List';
+import { Panel } from './Panel';
 
 type MenuProps = {
     data: Item[]

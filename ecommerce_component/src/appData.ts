@@ -5,6 +5,8 @@ export type Item = {
     count: number,
 }
 
+export const tax = 0.0975;
+
 export const menuItems: Item[] = [
     {
         name: 'French Fries with Ketchup',

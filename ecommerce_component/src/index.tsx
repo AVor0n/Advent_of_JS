@@ -1,6 +1,5 @@
 import { createRoot } from 'react-dom/client';
-import { menuItems } from '../itemsData';
-import { Menu } from './pages/main';
+import { App } from './App';
 
-const root = createRoot(document.querySelector('.wrapper.menu')!);
-root.render(<Menu data={menuItems} />);
+const root = createRoot(document.getElementById('root')!);
+root.render(<App />);
