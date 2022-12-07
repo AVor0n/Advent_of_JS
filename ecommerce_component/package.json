@@ -6,7 +6,7 @@
   "module": "dist/module.js",
   "types": "dist/types.d.ts",
   "scripts": {
-    "dev": "parcel serve",
+    "dev": "parcel",
     "build": "parcel build src/index.ts",
     "check": "tsc --noEmit"
   },
@@ -16,9 +16,11 @@
     "typescript": "^4.9.3"
   },
   "devDependencies": {
+    "@parcel/transformer-svg-react": "^2.8.0",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "parcel": "^2.8.0",
+    "parcel-reporter-static-files-copy": "^1.4.0",
     "process": "^0.11.10"
   }
 }
