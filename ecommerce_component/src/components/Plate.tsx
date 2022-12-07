@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import Chevron from '../../images/chevron.svg';
+import Chevron from '../assets/svg/chevron.svg';
 
 type PlateProps = {
     name: string,

@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 body {
-  background: url('images/bg__left.svg') left 10% no-repeat,
-    url('images/bg__top-right.svg') right top no-repeat,
-    #EFF0F6 url('images/bg__btm-right.svg') right bottom no-repeat;
+  background: url('static/svg/bg__left.svg') left 10% no-repeat,
+    url('static/svg/bg__top-right.svg') right top no-repeat,
+    #EFF0F6 url('static/svg/bg__btm-right.svg') right bottom no-repeat;
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
