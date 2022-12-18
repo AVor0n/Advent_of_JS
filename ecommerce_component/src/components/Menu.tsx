@@ -1,17 +1,23 @@
-import { FC } from 'react';
-import { Item } from '../appData';
-import { Card } from './Card';
-import { List } from './List';
-import { Panel } from './Panel';
+import { FC } from "react";
+import { menuItems } from "../appData";
+import { Card } from "./Card";
 
 type MenuProps = {
-    data: Item[]
+    itemsInCart: string[],
+    addItemToCart: (name: string) => void
 }
 
-export const Menu: FC<MenuProps> = ({ data }) => {
+export const Menu: FC<MenuProps> = ({ itemsInCart, addItemToCart }) => {
     return (
-        <Panel title='To Go Menu'>
-            <List cls='menu' data={data} item={Card} keyProp={'name'}/>
-        </Panel>
+        <div className="panel">
+            <h1>To Go Menu</h1>
+            <ul className="menu">
+                {Object.entries(menuItems).map(([name, { price, imgSrc }]) => (
+                    <li key={name}>
+                        <Card name={name} imgSrc={imgSrc} inCart={itemsInCart.includes(name)} price={price} addToCart={addItemToCart} />
+                    </li>
+                ))}
+            </ul>
+        </div>
     )
 }

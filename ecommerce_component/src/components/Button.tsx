@@ -1,18 +1,20 @@
 import { FC } from "react"
+import Check from '../assets/svg/check.svg';
 
 type AddButtonProps = {
     added: boolean,
+    onClick: () => void,
 }
 
-export const AddButton: FC<AddButtonProps> = ({ added }) => {
+export const AddButton: FC<AddButtonProps> = ({ added, onClick }) => {
     if (added) {
         return (
             <button className="in-cart">
-                <img src="images/check.svg" alt="Check" />
+                <Check />
                 In Cart
             </button>
         )
     }
 
-    return <button className="add">Add to Cart</button>
+    return <button className="add" onClick={onClick}>Add to Cart</button>
 }

@@ -5,10 +5,11 @@ type CardProps = {
   name: string,
   price: number,
   imgSrc: string,
-  count: number,
+  inCart: boolean,
+  addToCart: (itemId: string) => void,
 }
 
-export const Card: FC<CardProps> = ({ name, price, count, imgSrc }) => {
+export const Card: FC<CardProps> = ({ name, price, inCart, imgSrc, addToCart }) => {
   return (
     <>
       <div className="plate">
@@ -17,7 +18,7 @@ export const Card: FC<CardProps> = ({ name, price, count, imgSrc }) => {
       <div className="content">
         <p className="menu-item">{name}</p>
         <p className="price">{price}</p>
-        <AddButton added={count > 0} />
+        <AddButton added={inCart} onClick={() => addToCart(name)}/>
       </div>
     </>
   )

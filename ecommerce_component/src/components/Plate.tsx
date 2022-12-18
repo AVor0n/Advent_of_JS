@@ -6,9 +6,17 @@ type PlateProps = {
     price: number,
     count: number,
     imgSrc: string,
+    onChange: (name: string, count: number) => void,
 }
 
-export const Plate: FC<PlateProps> = ({ name, price, count, imgSrc }) => {
+export const Plate: FC<PlateProps> = ({ name, price, count, imgSrc, onChange }) => {
+    const increase = () => {
+        onChange(name, count + 1)
+    }
+    const decrease = () => {
+        if(count === 0) return;
+        onChange(name, count - 1)
+    }
     return (
         <>
             <div className="plate">
@@ -22,9 +30,9 @@ export const Plate: FC<PlateProps> = ({ name, price, count, imgSrc }) => {
             </div>
 
             <div className="quantity__wrapper">
-                <button className="decrease"><Chevron /></button>
+                <button className="decrease" onClick={decrease}><Chevron /></button>
                 <div className="quantity">{count}</div>
-                <button className="increase"><Chevron /></button>
+                <button className="increase" onClick={increase}><Chevron /></button>
             </div>
 
             <div className="subtotal">
