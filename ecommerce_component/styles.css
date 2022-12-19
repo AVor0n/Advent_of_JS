@@ -1,34 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
 body {
-  background: url('static/svg/bg__left.svg') left 10% no-repeat,
-    url('static/svg/bg__top-right.svg') right top no-repeat,
-    #EFF0F6 url('static/svg/bg__btm-right.svg') right bottom no-repeat;
-  font-family: 'Poppins', sans-serif;
+  background: url("static/svg/bg__left.svg") left 10% no-repeat,
+    url("static/svg/bg__top-right.svg") right top no-repeat,
+    #eff0f6 url("static/svg/bg__btm-right.svg") right bottom no-repeat;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   min-height: 100%;
   min-width: 100%;
 }
 
+#root {
+  width: 100%;
+  height: 100vh;
+}
+
 .wrapper {
   align-items: center;
   display: flex;
   justify-content: center;
-  width: 100vw;
   gap: 50px;
-  height: 100vh;
+  height: 100%;
 }
 
 .panel {
   background: white;
   border-radius: 25px;
   box-sizing: border-box;
-  box-shadow: 0px 0px 70px #C7CBE3;
-  height: 875px;
+  box-shadow: 0px 0px 70px #c7cbe3;
+  height: 90vh;
   padding-top: 50px;
-  overflow-y: scroll;
-  width: 375px;
+  overflow-y: auto;
+  width: 400px;
 }
 
 h1 {
@@ -39,6 +43,9 @@ h1 {
 }
 
 ul {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -50,32 +57,31 @@ ul.menu li {
   padding-right: 30px;
   position: relative;
   gap: 20px;
-  margin-bottom: 45px;
 }
 
 ul.menu li:nth-child(4n + 1):before {
-  --background: #e1f1fe
+  --background: #e1f1fe;
 }
 
 ul.menu li:nth-child(4n + 2):before {
-  --background: #ffe2f0
+  --background: #ffe2f0;
 }
 
 ul.menu li:nth-child(4n + 3):before {
-  --background: #f7f7fe
+  --background: #f7f7fe;
 }
 
 ul.menu li:nth-child(4n + 4):before {
-  --background: #defef0
+  --background: #defef0;
 }
 
 ul.menu li:before {
   background: var(--background);
   border-bottom-left-radius: 20px;
   border-top-left-radius: 20px;
-  content: '';
+  content: "";
   display: block;
-  width: 100%;
+  width: calc(100% - 30px);
   height: 100%;
   position: absolute;
   left: 30px;
@@ -106,7 +112,7 @@ ul.menu .content {
 }
 
 .price,
-.subtotal{
+.subtotal {
   font-size: 2rem;
   line-height: 1;
   font-weight: bold;
@@ -118,11 +124,12 @@ ul.menu .price {
 }
 
 button {
-  background: #6B00F5;
+  background: #6b00f5;
   border: none;
   cursor: pointer;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   border-radius: 20px;
+  margin-bottom: 4px;
   padding: 4px 18px;
   font-size: 1rem;
   color: white;
@@ -134,10 +141,6 @@ button {
   gap: 10px;
 }
 
-ul.menu button {
-  position: absolute;
-}
-
 button.in-cart {
   background: black;
 }
@@ -147,13 +150,14 @@ button.in-cart {
 }
 
 .cart-summary {
-  border-bottom: 5px solid #D7D7F9;
+  border-bottom: 5px solid #d7d7f9;
   margin: 0 30px 0 25px;
 }
 
 .cart-summary li {
   display: grid;
-  grid-template-areas: "plate content content"
+  grid-template-areas:
+    "plate content content"
     "plate quantity price";
 }
 
@@ -245,7 +249,7 @@ button.in-cart {
 }
 
 .cart-summary li {
-  border-bottom: 1px solid #D7D7F9;
+  border-bottom: 1px solid #d7d7f9;
   margin-bottom: 45px;
   padding-bottom: 45px;
 }
@@ -281,5 +285,5 @@ button.in-cart {
 }
 
 .line-item.total .price {
-  color: #6B00F5;
+  color: #6b00f5;
 }
